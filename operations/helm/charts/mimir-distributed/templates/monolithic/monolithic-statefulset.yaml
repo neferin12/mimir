@@ -131,6 +131,7 @@ spec:
             - "-target=all"
             - "-config.expand-env=true"
             - "-config.file=/etc/mimir/mimir.yaml"
+            - "-auth.multitenancy-enabled=false"
             {{- if $zoneName }}
             - "-ingester.ring.instance-availability-zone={{ $zoneName }}"
             - "-store-gateway.sharding-ring.instance-availability-zone={{ $zoneName }}"
